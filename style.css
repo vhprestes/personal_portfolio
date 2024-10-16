@@ -98,6 +98,7 @@ p {
 
 .footer {
   display: flex;
+  margin-top: 20px;
   justify-content: center;
   align-items: center;
   height: 100px; /* Adjust the height as needed */

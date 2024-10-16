@@ -94,9 +94,10 @@ p {
 .footer {
   position: fixed;
   bottom: 0;
+  left: 0;
   width: 100%;
   z-index: 500;
-  height: 5% !important;
+  height: 7% !important;
   background-color: #ff6363 !important;
 }
 

@@ -10,6 +10,7 @@ body {
 
 
 
+
 ul {
   list-style-type: none;
 }
@@ -678,11 +679,32 @@ label {
   }
 }
 
+/*.blinking-cursor {*/
+/*  font-weight: 500;*/
+/*  margin-left: 4px;*/
+/*  font-size: 20px;*/
+/*  color: white !important;*/
+/*  -webkit-animation: 1s blink step-end infinite;*/
+/*  -moz-animation: 1s blink step-end infinite;*/
+/*  -ms-animation: 1s blink step-end infinite;*/
+/*  -o-animation: 1s blink step-end infinite;*/
+/*  animation: 1s blink step-end infinite;*/
+/*}*/
+
+/*#holder2 {*/
+/*  opacity: 0;*/
+/*}*/
+
+#secondline {
+  display: none;
+}
+
+
 .blinking-cursor {
   font-weight: 500;
-  margin-left: 4px;
   font-size: 20px;
-  color: white !important;
+  margin-left: 3px;
+  color: #2E3D48;
   -webkit-animation: 1s blink step-end infinite;
   -moz-animation: 1s blink step-end infinite;
   -ms-animation: 1s blink step-end infinite;
@@ -691,8 +713,7 @@ label {
 }
 
 @keyframes "blink" {
-  from,
-  to {
+  from, to {
     color: transparent;
   }
   50% {
@@ -701,8 +722,7 @@ label {
 }
 
 @-moz-keyframes blink {
-  from,
-  to {
+  from, to {
     color: transparent;
   }
   50% {
@@ -711,8 +731,7 @@ label {
 }
 
 @-webkit-keyframes "blink" {
-  from,
-  to {
+  from, to {
     color: transparent;
   }
   50% {
@@ -721,8 +740,7 @@ label {
 }
 
 @-ms-keyframes "blink" {
-  from,
-  to {
+  from, to {
     color: transparent;
   }
   50% {
@@ -731,8 +749,7 @@ label {
 }
 
 @-o-keyframes "blink" {
-  from,
-  to {
+  from, to {
     color: transparent;
   }
   50% {
@@ -740,6 +757,7 @@ label {
   }
 }
 
+/* fim blink */
 .success {
   padding: 1em;
   margin-bottom: 0.75rem;

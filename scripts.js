@@ -16,63 +16,21 @@ $(document).ready(function () {
 
   // input text for typing animation
   $("#holder").writeText("DESENVOLVEDOR FULLSTACK + CLOUD");
+  // adicionar mais uma linha embaixo do holder
+
+const sleep = (milliseconds) => {
+  return new Promise(resolve => setTimeout(resolve, milliseconds))
+}
 
 
-  // Push the body and the nav over by 285px over
-  var main = function () {
-    $(".fa-bars").click(function () {
-      $(".nav-screen").animate(
-          {
-            right: "0px"
-          },
-          200
-      );
+  sleep(4000).then(() => {
+    document.getElementById('firstline').style.display = 'none';
+    document.getElementById('secondline').style.display = 'inline';
+    document.getElementById('secondline').className = 'blinking-cursor';
+    $("#holder2").writeText("ACADEMICO DE CIÊNCIA DA COMPUTAÇÃO");
+  });
 
-      $("body").animate(
-          {
-            right: "285px"
-          },
-          200
-      );
-    });
 
-    // Then push them back */
-    $(".fa-times").click(function () {
-      $(".nav-screen").animate(
-          {
-            right: "-285px"
-          },
-          200
-      );
-
-      $("body").animate(
-          {
-            right: "0px"
-          },
-          200
-      );
-    });
-
-    $(".nav-links a").click(function () {
-      $(".nav-screen").animate(
-          {
-            right: "-285px"
-          },
-          500
-      );
-
-      $("body").animate(
-          {
-            right: "0px"
-          },
-          500
-      );
-    });
-  };
-
-  $(document).ready(main);
-
-  // initiate full page scroll
 
   $("#fullpage").fullpage({
     navigationTooltips: ["home", "sobre mim", "portfolio", "contact"],

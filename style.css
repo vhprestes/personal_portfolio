@@ -1,14 +1,9 @@
-
-
 /* general styles */
 
 body {
   font-family: "Raleway", sans-serif !important;
   width: 100%;
 }
-
-
-
 
 
 ul {
@@ -254,8 +249,7 @@ p {
 }
 
 .aboutme {
-  background: url("https://images.alphacoders.com/121/thumb-1920-1218911.jpg")
-  no-repeat;
+  background: url("https://images.alphacoders.com/121/thumb-1920-1218911.jpg") no-repeat;
   background-size: cover;
   padding-top: 30px;
 }
@@ -269,7 +263,6 @@ p {
   font-weight: 100;
   font-size: 17.4px;
 }
-
 
 
 /* bouncing arrow */
@@ -357,6 +350,7 @@ p {
   height: auto;
   overflow: none;
 }
+
 .skillbar {
   position: relative;
   display: block;
@@ -502,6 +496,7 @@ p {
     transform: translateX(10px);
   }
 }
+
 .shake {
   animation-name: shake;
 }
@@ -759,27 +754,98 @@ label {
 }
 
 /* fim blink */
-.success {
-  padding: 1em;
-  margin-bottom: 0.75rem;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-  color: #468847;
-  background-color: #dff0d8;
-  border: 1px solid #d6e9c6;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
+/*.success {*/
+/*  padding: 1em;*/
+/*  margin-bottom: 0.75rem;*/
+/*  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);*/
+/*  color: #468847;*/
+/*  background-color: #dff0d8;*/
+/*  border: 1px solid #d6e9c6;*/
+/*  -webkit-border-radius: 4px;*/
+/*  -moz-border-radius: 4px;*/
+/*  border-radius: 4px;*/
+/*}*/
+
+/*.error {*/
+/*  padding: 1em;*/
+/*  margin-bottom: 0.75rem;*/
+/*  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);*/
+/*  color: #b94a48;*/
+/*  background-color: #f2dede;*/
+/*  border: 1px solid rgba(185, 74, 72, 0.3);*/
+/*  -webkit-border-radius: 4px;*/
+/*  -moz-border-radius: 4px;*/
+/*  border-radius: 4px;*/
+/*}*/
+
+
+/* inicio mobile*/
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .nav-header {
+    display: none;
+  }
+
+  .navbar {
+    width: 100%;
+  }
+
+  .navbar-brand {
+    font-size: 1.5em;
+  }
+
+  .navbar-nav .nav-item .nav-link {
+    font-size: 1.2em;
+  }
+
+  .section h1 {
+    font-size: 1.5em;
+  }
+
+  .section p {
+    font-size: 1em;
+  }
+
+  .skillbar-title span {
+    font-size: 0.9em;
+  }
+
+  .skill-bar-percent {
+    font-size: 0.9em;
+  }
+
+  .contact-form .form-control {
+    font-size: 1em;
+  }
+
+  .contact-form .btn {
+    font-size: 1em;
+  }
+
+  .content {
+    width: 90%;
+    padding-right: 10%;
+  }
+
+  /*.footer-links ul {*/
+  /*  display: flex;*/
+  /*  flex-direction: column;*/
+  /*  align-items: center;*/
+  /*}*/
+
+  /*.footer-links li {*/
+  /*  margin: 10px 0;*/
+  /*}*/
+
+  .aboutme {
+    background: url("https://images.wallpaperscraft.com/image/single/keyboard_laptop_gradient_203739_1280x720.jpg") no-repeat;
+    background-size: cover;
+    padding-top: 30px;
+  }
+
 }
 
-.error {
-  padding: 1em;
-  margin-bottom: 0.75rem;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-  color: #b94a48;
-  background-color: #f2dede;
-  border: 1px solid rgba(185, 74, 72, 0.3);
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-}
+
+
 

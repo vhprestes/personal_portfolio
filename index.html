@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/><link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+<!--puxar o css de style.css-->
+<link rel="stylesheet" href="./style.css">
+</head>
+
+<script src="./scripts.js" type="module"></script>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.js"></script>
+<body>
+<!-- navbar header -->
+<div class="nav-header">
+  <i class="fa fa-bars fa-3x"></i>
+  <div class="header-links">
+    <ul>
+      <li data-menuanchor="firstPage"><a href="#home">HOME</a></li>
+      <li data-menuanchor="fourthPage"><a href="#contact">CONTATO</a></li>
+      <li data-menuanchor="thirdPage"><a href="#portfolio">PROJETOS</a></li>
+      <li data-menuanchor="secondPage"><a href="#about">SOBRE MIM</a></li>
+    </ul>
+  </div>
+</div>
+<!-- end navbar header -->
+
+<!-- sidebar slider -->
+
+<!-- end navbar slider -->
+
+<!-- begin fullpage -->
+
+<div id="fullpage">
+
+  <!-- begin section -->
+
+  <div class="section aboutme home" data-anchor="home">
+    <div class="opaque-bg animated fadeInDown">
+      <h1 style="color:white"><span style="color:#FF6363">VICTOR HUGO</span> MARTINS</h1>
+      <p><span id="holder"></span><span class="blinking-cursor">|</span></p>
+    </div>
+    <i id="moveDown" class="fa fa-chevron-down fa-3x bounce"></i>
+  </div>
+  <!-- end section -->
+
+  <!-- begin section -->
+
+  <div class="section" data-anchor="skills">
+    <div class="content">
+      <h1 class="">UM POUCO MAIS SOBRE MIM</h1>
+      <p class="">Olá! Meu nome é Victor, morando em Paracambi,
+        RJ. Sou um
+        desenvolvedor web full-stack com experiência em HTML, CSS, JavaScript, Typescript, Python,
+        Java e Groovy. Também tenho experiência com frameworks como Angular, React, Spring Boot e
+        Django. Estou sempre procurando aprender novas tecnologias e melhorar minhas habilidades de
+        desenvolvimento. Estou disponível para freelas e oportunidades de trabalho. Se você tem um
+        projeto que gostaria de discutir, entre em contato comigo! </p>
+
+      <div class="container-skillbar" >
+        <div class="skillbar clearfix " data-percent="70%">
+          <div class="skillbar-title" style="background: #DD1E2F;"><span>HTML5</span></div>
+          <div class="skillbar-bar" style="background: #DD1E2F;"></div>
+          <div class="skill-bar-percent">70%</div>
+        </div> <!-- End Skill Bar -->
+
+        <div class="skillbar clearfix " data-percent="60%">
+          <div class="skillbar-title" style="background: #EBB035;"><span>CSS3</span></div>
+          <div class="skillbar-bar" style="background: #EBB035;"></div>
+          <div class="skill-bar-percent">60%</div>
+        </div> <!-- End Skill Bar -->
+
+        <div class="skillbar clearfix " data-percent="80%">
+          <div class="skillbar-title" style="background: #218559;">
+            <span>Javascript/Typescript</span></div>
+          <div class="skillbar-bar" style="background: #218559;"></div>
+          <div class="skill-bar-percent">80%</div>
+        </div> <!-- End Skill Bar -->
+
+        <div class="skillbar clearfix " data-percent="50%">
+          <div class="skillbar-title" style="background: #6840D4;"><span>Python</span></div>
+          <div class="skillbar-bar" style="background: #6840D4;"></div>
+          <div class="skill-bar-percent">50%</div>
+        </div> <!-- End Skill Bar -->
+
+        <div class="skillbar clearfix " data-percent="40%">
+          <div class="skillbar-title" style="background: #06A2CB;"><span>Java</span></div>
+          <div class="skillbar-bar" style="background: #06A2CB;"></div>
+          <div class="skill-bar-percent">40%</div>
+        </div> <!-- End Skill Bar -->
+
+        <div class="skillbar clearfix " data-percent="65%">
+          <div class="skillbar-title" style="background: #6dd96e;"><span>Groovy</span></div>
+          <div class="skillbar-bar" style="background: #6dd96e;"></div>
+          <div class="skill-bar-percent">65%</div>
+        </div> <!-- End Skill Bar -->
+
+        <div class="skillbar clearfix " data-percent="20%">
+          <div class="skillbar-title" style="background: #AB4DD2;"><span>C#</span></div>
+          <div class="skillbar-bar" style="background: #AB4DD2;"></div>
+          <div class="skill-bar-percent">20%</div>
+        </div> <!-- End Skill Bar -->
+      </div>
+    </div>
+  </div>
+  <!-- end section -->
+
+  <!-- begin section -->
+
+  <div class="section projects" data-anchor="projects">
+    <h1> PROJETOS </h1>
+    <div class="projetos">
+      <div class="projeto">
+        <h2 style="text-align: center">
+          <a href="https://github.com/vhprestes/Linketinder-Project" target="_blank">Linketinder</a>
+        </h2>
+        <p>Um projeto fullstack feito utilizando Typescript, Groovy, Gradle, PostgreSQL. É uma
+          aplicação que tem como objetivo ser uma plataforma que conecta candidatos a vagas de
+          empresas. Nele, empresas podem se cadastrar para cadastrar vagas e dar 'likes' em
+          candidatos que as interessem. Já os candidatos podem dar likes nas vagas em que acham que
+          se encaixa</p>
+      </div>
+      <div class="projeto">
+        <h2 style="text-align: center">
+          <a href="https://github.com/vhprestes/Projeto-TFC" target="_blank"> Projeto TFC</a></h2>
+        <p>Primeiro projeto fullstack feito na trybe Feito utilizando NodeJS, Typescript, Express,
+          Mocha, Chai, Docker É um simulador de um campeonato de futebol, onde podemos inserir e
+          alterar partidas e ver a classificação dos times na tabela. Todo backend e os endpoints
+          consumidos pelo front foram de minha autoria, realizados no curso da Trybe</p>
+      </div>
+      <div class="projeto">
+        <h2 style="text-align: center">
+          <a href="https://github.com/vhprestes/ocr-space-automation" target="_blank">Automação OCR
+            Space</a></h2>
+        <p>Projeto desenvolvido utilizando C# com objetivo de realizar uma automação utilizando a
+          API OCR Space para extrair dados de invoices. Nesse projeto, são feitas chamadas na API
+          pública que retorna dados lidos. Através desse retorno, tratamos para extrair os dados
+          necessários</p>
+      </div>
+    </div>
+  </div>
+  <!-- end section -->
+
+  <!-- begin section -->
+
+  <div class="section" data-anchor="contact">
+    <div class="content">
+      <h1>ENTRE EM CONTATO COMIGO</h1>
+      <p>Tem interesse de entrar em contato comigo para uma proposta ou mesmo para um bate papo? Me
+        mande um email! Você também pode entrar em contato comigo por algum dos links no footer</p>
+      <br>
+      <div class="contact-form">
+        <div id="form-messages"></div>
+        <form id="ajax-contact" method="post" role="form" action="contact.php"
+              data-toggle="validator">
+          <div class="form-group has-feedback">
+            <input type="text" class="form-control" id="nome" name="nome" placeholder="NOME"
+                   data-error="Não deixe esse campo vazio" required>
+            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            <div class="help-block with-errors"></div>
+          </div>
+
+          <div class="form-group">
+            <input type="email" class="form-control" id="email" name="email" placeholder="EMAIL"
+                   data-error="Não deixe esse campo vazio" required>
+            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            <div class="help-block with-errors"></div>
+          </div>
+
+          <div class="form-group has-feedback">
+            <label for="message"></label>
+            <textarea
+                data-minlength="10"
+                class="form-control"
+                id="message" name="message"
+                placeholder="MESSAGE"
+                data-error="Mínimo de 10 caracteres"
+                required>
+            </textarea>
+
+            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            <div class="help-block with-errors"></div>
+          </div>
+
+          <div>
+            <button type="submit" id="submit" name="submit" class="btn btn-lg">ENVIAR MENSAGEM
+            </button>
+          </div>
+        </form>
+        <br>
+      </div>
+    </div>
+  </div>
+  <!-- end section -->
+
+  <!-- begin section -->
+
+</div>
+<!-- end section -->
+<!-- end fullpage -->
+
+<footer class="footer">
+  <div class="footer-links">
+    <ul>
+      <li><a href="https://github.com/vhprestes" target="_blank"><i class="fab fa-github fa-3x fa-inverse"></i></a></li>
+      <li><a href="https://www.linkedin.com/in/vhprestes/" target="_blank"><i class="fab fa-linkedin fa-solid fa-3x fa-inverse"></i></a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+
+</html>

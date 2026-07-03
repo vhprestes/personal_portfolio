@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Victor Hugo Soares - Portfolio</title>
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
@@ -10,19 +11,20 @@
 
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 
   <!--puxar o css de style.css-->
   <link rel="stylesheet" href="./style.css">
 </head>
 
-<script src="./scripts.js" type="module"></script>
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
 <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js" defer></script>
 <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.js"></script>
+  src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.js" defer></script>
+<script src="./scripts.js" defer></script>
 <body>
 <!-- navbar header -->
 <div class="nav-header">
@@ -30,7 +32,7 @@
   <div class="header-links">
     <ul>
       <li data-menuanchor="fourthPage"><a href="#contact">CONTATO</a></li>
-      <li data-menuanchor="thirdPage"><a href="#portfolio">PROJETOS</a></li>
+      <li data-menuanchor="thirdPage"><a href="#projects">PROJETOS</a></li>
       <li data-menuanchor="secondPage"><a href="#about">SOBRE MIM</a></li>
       <li data-menuanchor="firstPage"><a href="#home">HOME</a></li>
 
@@ -62,9 +64,9 @@
 
   <!-- begin section -->
 
-  <div class="section" data-anchor="skills">
+  <div class="section" data-anchor="about">
     <div class="content">
-      <h1 class="">UM POUCO MAIS SOBRE MIM</h1>
+      <h1 class="reveal-up">UM POUCO MAIS SOBRE MIM</h1>
       <p class="">Olá! Meu nome é Victor, morando em Paracambi,
         RJ. Sou um
         desenvolvedor web full-stack com experiência em HTML, CSS, JavaScript, Typescript, Python,
@@ -143,11 +145,11 @@
   <!-- begin section -->
 
   <div class="section projects" data-anchor="projects">
-    <h1> PROJETOS </h1>
+    <h1 class="reveal-up">PROJETOS</h1>
     <div class="projetos">
-      <div class="projeto">
+      <div class="projeto reveal-up">
         <h2 style="text-align: center">
-          <a href="https://github.com/vhprestes/Linketinder-Project" target="_blank">Linketinder</a>
+          <a href="https://github.com/vhprestes/Linketinder-Project" target="_blank" rel="noopener noreferrer">Linketinder</a>
         </h2>
         <p>Um projeto fullstack feito utilizando Typescript, Groovy, Gradle, PostgreSQL. É uma
           aplicação que tem como objetivo ser uma plataforma que conecta candidatos a vagas de
@@ -155,17 +157,17 @@
           candidatos que as interessem. Já os candidatos podem dar likes nas vagas em que acham que
           se encaixa</p>
       </div>
-      <div class="projeto">
+      <div class="projeto reveal-up">
         <h2 style="text-align: center">
-          <a href="https://github.com/vhprestes/Projeto-TFC" target="_blank"> Projeto TFC</a></h2>
+          <a href="https://github.com/vhprestes/Projeto-TFC" target="_blank" rel="noopener noreferrer"> Projeto TFC</a></h2>
         <p>Primeiro projeto fullstack feito na trybe Feito utilizando NodeJS, Typescript, Express,
           Mocha, Chai, Docker É um simulador de um campeonato de futebol, onde podemos inserir e
           alterar partidas e ver a classificação dos times na tabela. Todo backend e os endpoints
           consumidos pelo front foram de minha autoria, realizados no curso da Trybe</p>
       </div>
-      <div class="projeto">
+      <div class="projeto reveal-up">
         <h2 style="text-align: center">
-          <a href="https://github.com/vhprestes/ocr-space-automation" target="_blank">Automação OCR
+          <a href="https://github.com/vhprestes/ocr-space-automation" target="_blank" rel="noopener noreferrer">Automação OCR
             Space</a></h2>
         <p>Projeto desenvolvido utilizando C# com objetivo de realizar uma automação utilizando a
           API OCR Space para extrair dados de invoices. Nesse projeto, são feitas chamadas na API
@@ -180,52 +182,15 @@
 
   <div class="section" data-anchor="contact">
     <div class="content">
-      <h1>ENTRE EM CONTATO COMIGO</h1>
+      <h1 class="reveal-up">ENTRE EM CONTATO COMIGO</h1>
       <p>Tem interesse de entrar em contato comigo para uma proposta ou mesmo para um bate papo? Me
-        mande ume-mail! Você também pode entrar em contato comigo por algum dos links no footer</p>
-<!--      mail to: vhprestes@gmail.com -->
+        mande um e-mail! Você também pode entrar em contato comigo por algum dos links no footer.</p>
       <br>
-<!--      <div class="contact-form">-->
-<!--        <div id="form-messages"></div>-->
-<!--        <form id="ajax-contact" method="post" role="form" action="contact.php"-->
-<!--              data-toggle="validator">-->
-<!--          <div class="form-group has-feedback">-->
-<!--            <input type="text" class="form-control" id="nome" name="nome" placeholder="NOME"-->
-<!--                   data-error="Não deixe esse campo vazio" required>-->
-<!--            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>-->
-<!--            <div class="help-block with-errors"></div>-->
-<!--          </div>-->
-
-<!--          <div class="form-group">-->
-<!--            <input type="email" class="form-control" id="email" name="email" placeholder="EMAIL"-->
-<!--                   data-error="Não deixe esse campo vazio" required>-->
-<!--            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>-->
-<!--            <div class="help-block with-errors"></div>-->
-<!--          </div>-->
-
-<!--          <div class="form-group">-->
-<!--            <label for="message"></label>-->
-<!--            <textarea-->
-<!--                data-minlength="10"-->
-<!--                class="form-control"-->
-<!--                id="message" name="message"-->
-<!--                placeholder="MESSAGE"-->
-<!--                data-error="Mínimo de 10 caracteres"-->
-<!--                required-->
-<!--                rows="5"-->
-<!--                cols="30"-->
-<!--            >-->
-
-<!--            </textarea>-->
-          </div>
-          <div>
+      <div class="contact-actions reveal-up">
             <a href="mailto:vhprestes@gmail.com">
             <button type="submit" id="submit" name="submit" class="btn btn-lg">ENVIAR E-MAIL
             </button>
             </a>
-          </div>
-        </form>
-        <br>
       </div>
     </div>
   </div>
@@ -240,9 +205,9 @@
 <footer class="footer">
   <div class="footer-links">
     <ul>
-      <li><a href="https://github.com/vhprestes" target="_blank"><i
+        <li><a href="https://github.com/vhprestes" target="_blank" rel="noopener noreferrer"><i
           class="fab fa-github fa-3x fa-inverse"></i></a></li>
-      <li><a href="https://www.linkedin.com/in/vhprestes/" target="_blank"><i
+        <li><a href="https://www.linkedin.com/in/vhprestes/" target="_blank" rel="noopener noreferrer"><i
           class="fab fa-linkedin fa-solid fa-3x fa-inverse"></i></a></li>
     </ul>
   </div>

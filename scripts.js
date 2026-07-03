@@ -1,59 +1,70 @@
 
 $(document).ready(function () {
-  // typing animation
-  (function ($) {
-    $.fn.writeText = function (content) {
-      var contentArray = content.split(""),
-          current = 0,
-          elem = this;
-      setInterval(function () {
-        if (current < contentArray.length) {
-          elem.text(elem.text() + contentArray[current++]);
-        }
-      }, 80);
-    };
-  })(jQuery);
+  function typeText(targetSelector, content, speed) {
+    const element = $(targetSelector);
+    element.text("");
 
-  // input text for typing animation
-  $("#holder").writeText("DESENVOLVEDOR FULLSTACK + CLOUD");
-  // adicionar mais uma linha embaixo do holder
+    let index = 0;
+    const timer = setInterval(function () {
+      if (index >= content.length) {
+        clearInterval(timer);
+        return;
+      }
 
-const sleep = (milliseconds) => {
-  return new Promise(resolve => setTimeout(resolve, milliseconds))
-}
+      element.text(element.text() + content[index]);
+      index += 1;
+    }, speed);
+  }
 
+  function revealElements(section) {
+    const $section = $(section);
+    $section.find(".reveal-up").each(function (idx) {
+      const element = $(this);
+      setTimeout(function () {
+        element.addClass("is-visible");
+      }, idx * 120);
+    });
+  }
 
-  sleep(4000).then(() => {
-    document.getElementById('firstline').style.display = 'none';
-    document.getElementById('secondline').style.display = 'inline';
-    document.getElementById('secondline').className = 'blinking-cursor';
-    $("#holder2").writeText("ACADEMICO DE CIÊNCIA DA COMPUTAÇÃO");
-  });
+  function animateSkillBars() {
+    $(".skillbar").each(function () {
+      const $bar = $(this).find(".skillbar-bar");
+      const percent = $(this).attr("data-percent");
+      $bar.css("width", "0");
+      requestAnimationFrame(function () {
+        $bar.css("width", percent);
+      });
+    });
+  }
 
+  typeText("#holder", "DESENVOLVEDOR FULLSTACK + CLOUD", 58);
 
+  setTimeout(function () {
+    document.getElementById("firstline").style.display = "none";
+    document.getElementById("secondline").style.display = "inline";
+    document.getElementById("secondline").className = "blinking-cursor";
+    typeText("#holder2", "ACADEMICO DE CIENCIA DA COMPUTACAO", 50);
+  }, 2600);
 
   $("#fullpage").fullpage({
-    navigationTooltips: ["home", "sobre mim", "portfolio", "contact"],
-    anchors: ["home", "about", "portfolio", "contact"],
-    menu: "#myMenu",
+    navigationTooltips: ["home", "sobre mim", "projetos", "contato"],
+    anchors: ["home", "about", "projects", "contact"],
     fitToSection: true,
+    scrollingSpeed: 780,
+    easingcss3: "cubic-bezier(0.2, 0.7, 0.2, 1)",
+    onLeave: function (index, nextIndex, direction) {
+      const leavingSection = $(".section").eq(index - 1);
+      leavingSection.find(".reveal-up").removeClass("is-visible");
+    },
     afterLoad: function (anchorLink, index) {
-      var loadedSection = $(this);
+      const loadedSection = $(".section").eq(index - 1);
+      revealElements(loadedSection);
 
-      if (index == 2) {
-        $(".skillbar").each(function () {
-          $(this)
-          .find(".skillbar-bar")
-          .animate(
-              {
-                width: $(this).attr("data-percent")
-              },
-              2500
-          );
-        });
+      if (anchorLink === "about") {
+        animateSkillBars();
       }
     }
   });
 
-
+  revealElements($(".section").first());
 });

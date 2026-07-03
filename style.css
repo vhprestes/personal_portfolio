@@ -155,13 +155,38 @@ a {
 
 /* Hero */
 .aboutme {
-  background:
-    linear-gradient(120deg, rgba(7, 11, 20, 0.92), rgba(7, 11, 20, 0.65)),
-    url("https://images.alphacoders.com/121/thumb-1920-1218911.jpg") center center no-repeat;
-  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(120deg, rgba(7, 11, 20, 0.88), rgba(7, 11, 20, 0.62));
   flex-direction: column;
   gap: 24px;
   justify-content: center;
+}
+
+.aboutme::before,
+.aboutme::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.aboutme::before {
+  background: url("https://images.alphacoders.com/121/thumb-1920-1218911.jpg") center center / cover no-repeat;
+  transform: scale(1.06);
+  filter: saturate(1.05) contrast(1.02) brightness(0.72);
+  opacity: 0.9;
+}
+
+.aboutme::after {
+  background:
+    radial-gradient(circle at 50% 38%, rgba(36, 214, 181, 0.12), transparent 30%),
+    linear-gradient(120deg, rgba(7, 11, 20, 0.58), rgba(7, 11, 20, 0.26));
+}
+
+.aboutme > * {
+  position: relative;
+  z-index: 1;
 }
 
 .opaque-bg {
@@ -169,10 +194,11 @@ a {
   margin-right: auto;
   max-width: 560px;
   border: 1px solid var(--border);
-  background: rgba(5, 10, 21, 0.65);
+  background: rgba(5, 10, 21, 0.42);
   border-radius: 18px;
   padding: 18px 20px 20px;
   box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
   animation: card-rise 1.1s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 

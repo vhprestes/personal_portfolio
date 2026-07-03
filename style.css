@@ -17,9 +17,15 @@
   box-sizing: border-box;
 }
 
+html {
+  min-height: 100%;
+  background: linear-gradient(145deg, var(--bg), var(--bg-2));
+}
+
 body {
   margin: 0;
   width: 100%;
+  min-height: 100vh;
   color: var(--text);
   font-family: "Space Grotesk", sans-serif;
   background:
@@ -58,13 +64,25 @@ a {
 .section {
   text-align: center;
   position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 92px 0 88px;
+}
+
+#fullpage,
+.fp-section,
+.fp-slide {
+  background: transparent !important;
 }
 
 .content {
   margin-left: auto;
   margin-right: auto;
   max-width: 920px;
-  padding: 108px 24px 120px;
+  width: min(920px, calc(100% - 32px));
+  padding: 0 24px;
 }
 
 /* Header */
@@ -138,7 +156,7 @@ a {
     linear-gradient(120deg, rgba(7, 11, 20, 0.92), rgba(7, 11, 20, 0.65)),
     url("https://images.alphacoders.com/121/thumb-1920-1218911.jpg") center center no-repeat;
   background-size: cover;
-  padding-top: 30px;
+  padding-top: 0;
 }
 
 .opaque-bg {
@@ -240,7 +258,7 @@ a {
 }
 
 .projects {
-  padding-top: 40px;
+  padding-top: 0;
 }
 
 .projetos {
@@ -404,7 +422,7 @@ a {
   }
 
   .content {
-    padding-top: 92px;
+    width: min(920px, calc(100% - 24px));
   }
 
   .projetos {
@@ -423,7 +441,12 @@ a {
 
   .content {
     max-width: 95%;
-    padding: 90px 10px 112px;
+    width: min(100%, calc(100% - 20px));
+    padding: 0 10px;
+  }
+
+  .section {
+    padding: 84px 0 84px;
   }
 
   .aboutme h1 {

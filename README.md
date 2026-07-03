@@ -12,36 +12,23 @@ Exemplo com Node:
 npx serve .
 ```
 
-## Deploy + dominio is-a.dev (GitHub Pages)
+## Deploy + dominio is-a.dev
 
-Este projeto ja esta no GitHub Pages. Para publicar no `*.is-a.dev`, voce precisa:
+Este projeto ja esta no GitHub Pages. Para colocar um dominio `*.is-a.dev`, o registro precisa ficar no repositorio `is-a-dev/register`, e nao neste repo do portfolio.
 
-1. Definir o dominio customizado no projeto (arquivo `CNAME`).
-2. Criar o JSON de registro para o repositorio `is-a-dev/register`.
-3. Abrir um PR nesse repositorio.
+Fluxo correto:
 
-### 1) Gerar arquivos automaticamente
+1. Mantenha este repositório sem `CNAME` para nao trocar o endereco do Pages.
+2. Crie o JSON de registro em `is-a-dev/register/domains/`.
+3. Abra o PR nesse repositorio.
 
-Use o script abaixo para gerar tudo que falta:
-
-```powershell
-./scripts/setup-isadev.ps1 -Domain "victor.is-a.dev" -Email "seu-email@exemplo.com"
-```
-
-Ele gera:
-
-1. `CNAME` na raiz do projeto (para o GitHub Pages).
-2. `isadev-registration/victor.is-a.dev.json` com o formato esperado pelo is-a.dev.
-
-### 2) Formato do arquivo de registro
-
-Exemplo do JSON gerado:
+Exemplo do registro para `victorhugo.is-a.dev`:
 
 ```json
 {
 	"owner": {
 		"username": "vhprestes",
-		"email": "seu-email@exemplo.com"
+		"email": "vhprestes@gmail.com"
 	},
 	"record": {
 		"CNAME": "vhprestes.github.io"
@@ -49,28 +36,7 @@ Exemplo do JSON gerado:
 }
 ```
 
-### 3) Abrir PR no is-a.dev
-
-Depois de instalar o GitHub CLI (`gh`) e autenticar (`gh auth login`), voce pode fazer:
-
-```powershell
-git add .
-git commit -m "chore: setup is-a.dev domain"
-git push
-
-gh repo fork is-a-dev/register --clone --remote
-Set-Location register
-
-git checkout -b add-victor-domain
-Copy-Item ../isadev-registration/victor.is-a.dev.json ./domains/
-git add ./domains/victor.is-a.dev.json
-git commit -m "Add victor.is-a.dev"
-git push --set-upstream origin add-victor-domain
-
-gh pr create --repo is-a-dev/register --title "Add victor.is-a.dev" --body "Adding domain for portfolio." --base main
-```
-
-Depois de aprovado, seu dominio `victor.is-a.dev` passa a resolver para seu GitHub Pages.
+Depois de aprovado, voce adiciona o dominio customizado nas configuracoes do GitHub Pages, se quiser usar o `is-a.dev` como endereco principal.
 
 ## Checklist rapido
 

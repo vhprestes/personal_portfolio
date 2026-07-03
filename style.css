@@ -70,7 +70,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: calc(var(--header-height) + 32px) 0 calc(var(--footer-height) + 32px);
+  padding: 0;
 }
 
 #fullpage,
@@ -457,11 +457,7 @@ a {
   }
 
   .section {
-    padding: calc(var(--header-height) + 24px) 0 calc(var(--footer-height) + 24px);
-  }
-
-  .aboutme {
-    gap: 18px;
+    padding: 0;
   }
 
   .aboutme h1 {

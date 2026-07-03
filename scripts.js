@@ -50,6 +50,8 @@ $(document).ready(function () {
     navigationTooltips: ["home", "sobre mim", "projetos", "contato"],
     anchors: ["home", "about", "projects", "contact"],
     fitToSection: true,
+    paddingTop: "72px",
+    paddingBottom: "72px",
     scrollingSpeed: 780,
     easingcss3: "cubic-bezier(0.2, 0.7, 0.2, 1)",
     onLeave: function (index, nextIndex, direction) {
